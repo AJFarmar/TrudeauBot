@@ -1,5 +1,5 @@
 // A setup script for TrudeauBot
-// Usage: node Setup.js <IPA token>
+// Usage: node Setup.js <API token>
 
 // Require the filesystem
 const fs = require('fs');
