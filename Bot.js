@@ -9,6 +9,7 @@ const client = new Discord.Client();
 // The ready message:
 client.on('ready', () => {
     console.log(`Successfully logged in as ${client.user.tag} with id ${client.user.id}.`);
+    console.log(`Listening on ${[...client.channels.values()].length} channels.`);
 });
 
 // Setup the additional state of the client.

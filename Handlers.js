@@ -2,7 +2,7 @@
 
 const setup = (client) => {
     console.log("Setting up TrudeauBot state:")
-    console.log('No setup required');
+    console.log('No setup required.');
 };
 
 // Rejex testers
@@ -19,6 +19,7 @@ const message = (client) => (message) => {
     const containsMan = regex.tester.test(message.content);
 
     if (notSelf && containsMan) {
+        console.log(`Processing potential message from ${message.author.tag} with id ${message.author.id}.`);
         const words = message.content
             .match(regex.words)
             .filter(word => word.length < 20)
@@ -26,6 +27,9 @@ const message = (client) => (message) => {
 
         if (words.length != 0) {
             message.channel.send(`Excuse me <@${message.author.id}>? We don't use that sort of language here.`);
+            console.log("Replied.");
+        } else {
+            console.log("Did not reply.");
         }
     }
 
