@@ -19,7 +19,7 @@ Made using [discord.js](https://discord.js.org/#/).
 - [ ] Preserve capitalisation as much as possible in replies.
 
 ### Anti-spam features
-- [ ] Only reply to occurences of man/men which occur embedded in another word.
+- [x] Only reply to occurences of man/men which occur embedded in another word.
 - [ ] Do not reply to occurences where man/men appears more than two times in a word.
 - [ ] Do not reply to occurences where man/men appears in a word of length more than 25 characters.
 - [ ] Kick people who have triggered replacement more than 6 times in a minute.
