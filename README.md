@@ -14,7 +14,7 @@ Made using [discord.js](https://discord.js.org/#/).
 
 ## Feature list
 ### Base features
-- [ ] Reply to occurences of man/men.
+- [x] Reply to occurences of man/men.
 - [ ] Replace occurences of man/men with person/people.
 - [ ] Preserve capitalisation as much as possible in replies.
 
