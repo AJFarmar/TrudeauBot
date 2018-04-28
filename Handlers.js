@@ -6,16 +6,23 @@ const setup = (client) => {
 };
 
 // Rejex testers
-const regexes = {
-    tester: /\wm(a|e)n|m(a|e)n\w/gi
-}
+var regex = {}
+regex.base   = 'm(a|e)n'; 
+regex.tester = `\\w${regex.base}|${regex.base}\\w`;
+regex.words  = `\\b(\\w+${regex.base}\\w*|\\w*${regex.base}\\w+)\\b`;
+
+// Compile the regexes
+for (var i in regex) regex[i] = new RegExp(regex[i], 'gi');
 
 const message = (client) => (message) => {
     const notSelf = client.user.id != message.author.id;
-    const containsMan = regexes.tester.test(message.content);
-    
+    const containsMan = regex.tester.test(message.content);
+
     if (notSelf && containsMan) {
-        message.channel.send(`Excuse me, <@${message.author.id}>? We don't use that sort of language here.`);
+        const words = message.content.match(regex.words).filter(word => word.length < 20);
+        if (words.length != 0) {
+            message.channel.send(`Excuse me <@${message.author.id}>? We don't use that sort of language here.`);
+        }
     }
 
 };
