@@ -25,4 +25,12 @@ Made using [discord.js](https://discord.js.org/#/).
 - [x] Limit the number of corrected words to 5.
 - [ ] Kick people who have triggered replacement more than 6 times in a minute.
 
+### Words excluded due to anti-spam features
+* man
+* men
+* counterpronunciamento
+* disestablishmentarian
+* establishmentarianism
+* mandibulosuspensorial
+
 *(Note: wordlist taken from unix /usr/share/dict/words)*
