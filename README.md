@@ -15,13 +15,14 @@ Made using [discord.js](https://discord.js.org/#/).
 ## Feature list
 ### Base features
 - [x] Reply to occurences of man/men.
-- [ ] Replace occurences of man/men with person/people.
-- [ ] Preserve capitalisation as much as possible in replies.
+- [x] Replace occurences of man/men with person/people.
+- [x] Preserve capitalisation as much as possible in replies.
 
 ### Anti-spam features
 - [x] Only reply to occurences of man/men which occur embedded in another word. (2 words excluded)
 - [x] Do not reply to occurences where man/men appears more than two times in a word. (0 words excluded)
 - [x] Do not reply to occurences where man/men appears in a word of length more than 20 characters. (4 words excluded)
+- [x] Limit the number of corrected words to 5.
 - [ ] Kick people who have triggered replacement more than 6 times in a minute.
 
 *(Note: wordlist taken from unix /usr/share/dict/words)*
