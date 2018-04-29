@@ -13,7 +13,7 @@ const message = (client) => (message) => {
     const containsMan = Regex.tester.test(message.content);
 
     if (notSelf && containsMan) {
-        console.log(`Processing potential message from ${message.author.tag} with id ${message.author.id}.`);
+        console.log(`Processing potential message from ${message.author.tag} with id ${message.author.id} on channel ${message.channel.name}.`);
         const words = message.content
             .match(Regex.words)
             .filter(word => word.length < 20)
