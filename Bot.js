@@ -20,4 +20,3 @@ client.on('message', Handlers.message(client));
 
 // Login
 client.login(token);
-
